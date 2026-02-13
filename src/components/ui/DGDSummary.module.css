@@ -1,0 +1,68 @@
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lines {
+  padding: var(--spacing-21);
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-8) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.line:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.value.positive {
+  color: var(--success);
+}
+
+.value.negative {
+  color: var(--error);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-21);
+  background: var(--navy);
+}
+
+.totalLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.totalValue {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--gold);
+}

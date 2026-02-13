@@ -1,0 +1,109 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 3px 13px rgba(195, 162, 39, 0.1);
+}
+
+.card.contested {
+  border-left: 3px solid var(--warning);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-13);
+}
+
+.date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.category {
+  font-size: 13px;
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: 13px;
+  font-weight: 600;
+}
+
+.category.gardiennage { background: rgba(0, 238, 255, 0.1); color: var(--cyan); }
+.category.nettoyage { background: rgba(34, 197, 94, 0.1); color: var(--success); }
+.category.reparation_identifie { background: rgba(239, 68, 68, 0.1); color: var(--error); }
+.category.reparation_non_identifie { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.category.eau_electricite { background: rgba(195, 162, 39, 0.1); color: var(--gold); }
+.category.vol { background: rgba(239, 68, 68, 0.15); color: var(--error); }
+.category.divers { background: rgba(148, 163, 184, 0.1); color: var(--text-secondary); }
+
+.designation {
+  font-size: 16px;
+  margin-bottom: var(--spacing-8);
+  color: var(--text);
+}
+
+.amount {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: var(--spacing-13);
+}
+
+.fautive {
+  font-size: 13px;
+  color: var(--error);
+  margin-bottom: var(--spacing-8);
+}
+
+.arbitrage {
+  background: rgba(245, 158, 11, 0.05);
+  padding: var(--spacing-8);
+  border-radius: 5px;
+  margin-bottom: var(--spacing-13);
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warning);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.btnContest, .btnDelete {
+  padding: var(--spacing-5) var(--spacing-13);
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnContest {
+  background: var(--warning);
+  color: white;
+}
+
+.btnContest:hover {
+  background: #d97706;
+}
+
+.btnDelete {
+  background: var(--error);
+  color: white;
+}
+
+.btnDelete:hover {
+  background: #dc2626;
+}

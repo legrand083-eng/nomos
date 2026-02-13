@@ -1,0 +1,125 @@
+.container {
+  padding: var(--spacing-34);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Chivel', serif;
+  font-size: 34px;
+  color: var(--gold);
+  margin-bottom: var(--spacing-34);
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-21);
+  margin-bottom: var(--spacing-34);
+}
+
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.kpiLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpiValue {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.kpiValue.positive {
+  color: var(--success);
+}
+
+.kpiValue.negative {
+  color: var(--error);
+}
+
+.section {
+  margin-bottom: var(--spacing-34);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+}
+
+.sectionHeader h2 {
+  font-size: 21px;
+  color: var(--text);
+}
+
+.btnAdd, .btnSave {
+  padding: var(--spacing-8) var(--spacing-21);
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnAdd:hover, .btnSave:hover {
+  background: #a68820;
+}
+
+.form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+  display: flex;
+  gap: var(--spacing-13);
+  margin-bottom: var(--spacing-21);
+}
+
+.form input, .form select {
+  padding: var(--spacing-8);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form button {
+  padding: var(--spacing-8) var(--spacing-13);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form button[type="submit"] {
+  background: var(--gold);
+  color: white;
+}
+
+.form button[type="button"] {
+  background: var(--error);
+  color: white;
+}
+
+.depensesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-21);
+}

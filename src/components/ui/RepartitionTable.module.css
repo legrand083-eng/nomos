@@ -1,0 +1,97 @@
+.container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: var(--navy);
+}
+
+.table th {
+  padding: var(--spacing-13);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+  background: rgba(195, 162, 39, 0.03);
+}
+
+.table td {
+  padding: var(--spacing-13);
+  font-size: 15px;
+  color: var(--text);
+}
+
+.input {
+  width: 80px;
+  padding: var(--spacing-5);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  text-align: right;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.amount {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.positive {
+  color: var(--success);
+}
+
+.negative {
+  color: var(--error);
+}
+
+.table tfoot {
+  background: var(--surface-elevated);
+  font-weight: 700;
+}
+
+.total {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+}
+
+.total.valid {
+  color: var(--success);
+}
+
+.total.invalid {
+  color: var(--error);
+}
+
+.warning {
+  padding: var(--spacing-13);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}

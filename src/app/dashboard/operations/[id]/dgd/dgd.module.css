@@ -1,0 +1,150 @@
+.container {
+  padding: var(--spacing-34);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Chivel', serif;
+  font-size: 34px;
+  color: var(--gold);
+  margin-bottom: var(--spacing-34);
+}
+
+.header {
+  margin-bottom: var(--spacing-21);
+}
+
+.btnAdd {
+  padding: var(--spacing-8) var(--spacing-21);
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnAdd:hover {
+  background: #a68820;
+}
+
+.form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-13);
+  margin-bottom: var(--spacing-21);
+}
+
+.form input {
+  padding: var(--spacing-8);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form button {
+  grid-column: span 3;
+  padding: var(--spacing-8) var(--spacing-13);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form button[type="submit"] {
+  background: var(--gold);
+  color: white;
+}
+
+.form button[type="button"] {
+  background: var(--error);
+  color: white;
+}
+
+.dgdsList {
+  display: grid;
+  gap: var(--spacing-21);
+}
+
+.dgdCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-21);
+}
+
+.lot {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.status {
+  font-size: 13px;
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: 13px;
+  font-weight: 600;
+}
+
+.status.genere { background: rgba(0, 238, 255, 0.1); color: var(--cyan); }
+.status.signe_entreprise { background: rgba(195, 162, 39, 0.1); color: var(--gold); }
+.status.signe_moe { background: rgba(195, 162, 39, 0.15); color: var(--gold); }
+.status.definitif { background: rgba(34, 197, 94, 0.1); color: var(--success); }
+
+.signatures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-13);
+  margin-top: var(--spacing-21);
+  padding-top: var(--spacing-21);
+  border-top: 1px solid var(--border);
+}
+
+.signature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.signature span:first-child {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.signed {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.btnSign {
+  padding: var(--spacing-5) var(--spacing-13);
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSign:hover {
+  background: #a68820;
+}
