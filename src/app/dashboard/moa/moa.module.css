@@ -1,0 +1,228 @@
+.container {
+  padding: var(--spacing-34);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-34);
+}
+
+.title {
+  font-family: var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-21);
+  margin-bottom: var(--spacing-34);
+}
+
+.tableContainer {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: var(--bg-tertiary);
+}
+
+.table th {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: var(--spacing-13) var(--spacing-21);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table td {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: var(--spacing-13) var(--spacing-21);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table tbody tr:hover {
+  background: var(--bg-tertiary);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.name {
+  font-weight: 600;
+}
+
+.number {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+
+.amount {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--gold);
+  text-align: right;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: var(--radius-sm);
+}
+
+.badge[data-status="en_cours"] {
+  background: rgba(0, 238, 255, 0.1);
+  color: var(--cyan);
+}
+
+.badge[data-status="termine"] {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+}
+
+.badge[data-status="suspendu"] {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.alert {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: var(--radius-sm);
+}
+
+.viewBtn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: transparent;
+  border: 1px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-5) var(--spacing-13);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewBtn:hover {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.empty {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--spacing-55);
+}
+
+.loading {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--spacing-55);
+}
+
+/* Dark mode */
+:global(.dark) .container {
+  background: var(--bg-primary-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .subtitle {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .tableContainer {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .table thead {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .table th {
+  color: var(--text-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .table td {
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .table tbody tr:hover {
+  background: var(--bg-tertiary-dark);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .table {
+    font-size: 13px;
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--spacing-8) var(--spacing-13);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-21);
+  }
+  
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tableContainer {
+    overflow-x: auto;
+  }
+  
+  .table {
+    min-width: 900px;
+  }
+}
