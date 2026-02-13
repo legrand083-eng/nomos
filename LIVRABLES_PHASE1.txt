@@ -1,0 +1,168 @@
+═══════════════════════════════════════════════════════════════
+NOMOΣ — LIVRABLES PHASE 1
+═══════════════════════════════════════════════════════════════
+
+Date de livraison : 13 février 2026
+Version : ARCH-V1-0001-EN
+Statut : ✅ VALIDÉ
+
+───────────────────────────────────────────────────────────────
+FICHIERS LIVRÉS
+───────────────────────────────────────────────────────────────
+
+1. nomos-phase1-20260212.zip (86 Ko)
+   - Code source complet du projet
+   - Exclut : node_modules, .next, .git, screenshots
+
+2. nomos-screenshots-20260212.zip (363 Ko)
+   - Captures d'écran de validation
+   - 3 images WebP + 1 fichier texte
+
+3. VALIDATION_PHASE1.md
+   - Rapport de validation complet
+   - Checklist détaillée
+   - Captures d'écran intégrées
+
+4. DECISIONS_PHASE1.md
+   - Décisions techniques documentées
+   - Problèmes rencontrés et solutions
+   - Recommandations Phase 2
+
+───────────────────────────────────────────────────────────────
+STRUCTURE DU PROJET
+───────────────────────────────────────────────────────────────
+
+nomos/
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── layout.js           # Root layout
+│   │   ├── page.js             # Temple de Questor
+│   │   ├── connexion/          # Page de connexion
+│   │   ├── dashboard/          # Dashboard protégé
+│   │   └── api/auth/           # API d'authentification
+│   ├── components/
+│   │   ├── ui/                 # Composants UI réutilisables
+│   │   ├── layout/             # Header, Sidebar
+│   │   └── modules/            # Composants métier (Phase 2+)
+│   ├── lib/
+│   │   ├── db.js               # Connexion MySQL
+│   │   ├── auth.js             # Logique d'authentification
+│   │   ├── middleware.js       # Protection des routes
+│   │   └── utils.js            # Fonctions utilitaires
+│   └── styles/
+│       └── globals.css         # Design System NOMOΣ
+├── database/
+│   ├── schema.sql              # Schéma MySQL (7 tables)
+│   └── seed.sql                # Données de démonstration
+├── docs/
+│   └── README.md               # Documentation complète
+├── scripts/
+│   └── generate-password-hash.js
+├── package.json
+├── next.config.js
+├── .env.example
+└── .env.local
+
+───────────────────────────────────────────────────────────────
+COMPTES DE DÉMONSTRATION
+───────────────────────────────────────────────────────────────
+
+Mot de passe commun : Nomos2026!
+
+Rôle            Email                           Code anti-robot
+────────────────────────────────────────────────────────────────
+Admin           christophe@polarisconseil.pro   DURchr
+MOE             moe@demo-nomos.pro              MARsop
+OPC             opc@demo-nomos.pro              DUBjea
+MOA             moa@demo-nomos.pro              LERmar
+Entreprise      entreprise@demo-nomos.pro       BERpie
+Comptabilité    compta@demo-nomos.pro           PETcla
+
+───────────────────────────────────────────────────────────────
+INSTALLATION
+───────────────────────────────────────────────────────────────
+
+1. Extraire l'archive nomos-phase1-20260212.zip
+
+2. Installer les dépendances :
+   cd nomos
+   pnpm install
+
+3. Configurer .env.local avec vos valeurs MySQL :
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_NAME=nomos_dev
+   DB_USER=nomos_user
+   DB_PASSWORD=your_password
+   JWT_SECRET=your_jwt_secret
+   JWT_REFRESH_SECRET=your_refresh_secret
+
+4. Créer la base de données MySQL :
+   CREATE DATABASE nomos_dev CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+5. Exécuter le schéma :
+   mysql -u nomos_user -p nomos_dev < database/schema.sql
+
+6. Charger les données de démonstration :
+   mysql -u nomos_user -p nomos_dev < database/seed.sql
+
+7. Lancer le serveur de développement :
+   pnpm dev
+
+8. Ouvrir http://localhost:3000
+
+───────────────────────────────────────────────────────────────
+CHECKLIST DE VALIDATION
+───────────────────────────────────────────────────────────────
+
+Installation et démarrage
+[✓] pnpm install complète sans erreurs
+[✓] pnpm dev démarre sans erreurs sur le port 3000
+[✓] Aucune erreur de compilation Next.js
+
+Interface utilisateur
+[✓] Page d'accueil : Logo NOMOΣ gold #C9A227
+[✓] Page de connexion : Formulaire fonctionnel
+[✓] Toggle dark mode fonctionne
+[✓] Design responsive (375px, 768px, 1440px)
+
+Base de données
+[✓] Schéma MySQL se crée sans erreurs
+[✓] Données seed s'insèrent sans erreurs
+[✓] Hashes bcrypt corrects
+
+Authentification
+[✓] API /api/auth/login fonctionnelle
+[✓] API /api/auth/refresh fonctionnelle
+[✓] API /api/auth/logout fonctionnelle
+[✓] Validation du code anti-robot
+[✓] Session unique par utilisateur
+
+Architecture
+[✓] Structure de fichiers conforme
+[✓] Aucune bibliothèque UI externe
+[✓] Couleurs conformes au Design System
+[✓] Polices conformes (Cinzel, DM Sans, JetBrains Mono)
+[✓] Espacements Fibonacci (3, 5, 8, 13, 21, 34, 55)
+
+───────────────────────────────────────────────────────────────
+DOCUMENTATION
+───────────────────────────────────────────────────────────────
+
+- docs/README.md : Documentation complète du projet
+- VALIDATION_PHASE1.md : Rapport de validation
+- DECISIONS_PHASE1.md : Décisions techniques
+- LIVRABLES_PHASE1.txt : Ce fichier
+
+───────────────────────────────────────────────────────────────
+SUPPORT
+───────────────────────────────────────────────────────────────
+
+POLARIS CONSEIL — Groupe QUESTOR
+Email : contact@polarisconseil.pro
+Téléphone : 06 72 33 11 70
+
+═══════════════════════════════════════════════════════════════
+NOMOΣ — νόμος — The Standard, The Rule
+© 2026 POLARIS CONSEIL — Groupe QUESTOR — Confidentiel
+═══════════════════════════════════════════════════════════════
