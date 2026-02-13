@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--space-8);
+  padding: var(--space-34);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.dropzone:hover {
+  border-color: var(--color-gold);
+  background: var(--bg-tertiary);
+}
+
+.dropzone.dragging {
+  border-color: var(--color-gold);
+  background: rgba(201, 162, 39, 0.1);
+}
+
+.dropzone.uploading {
+  cursor: not-allowed;
+}
+
+.fileInput {
+  display: none;
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: var(--space-13);
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.subtext {
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--space-13);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.error {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-error);
+  margin-top: var(--space-5);
+}

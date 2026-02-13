@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgCircle {
+  opacity: 0.2;
+}
+
+.progressCircle {
+  transition: stroke-dashoffset 0.5s ease, stroke 0.3s ease;
+}
+
+.percentage {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
