@@ -1,0 +1,116 @@
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-21) 0;
+  margin-bottom: var(--space-34);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--space-13);
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.stepCircle.active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
+}
+
+.stepCircle.completed {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 var(--space-8);
+  transition: all 0.3s ease;
+}
+
+.stepLine.completed {
+  background: var(--color-success);
+}
+
+.stepLabel {
+  text-align: center;
+  max-width: 150px;
+}
+
+.stepTitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.stepDescription {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stepper {
+    flex-direction: column;
+  }
+
+  .step {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: var(--space-13);
+  }
+
+  .stepIndicator {
+    flex-direction: column;
+    width: auto;
+    margin-bottom: 0;
+    margin-right: var(--space-13);
+  }
+
+  .stepLine {
+    width: 2px;
+    height: 30px;
+    margin: var(--space-5) 0;
+  }
+
+  .stepLabel {
+    text-align: left;
+    max-width: none;
+    flex: 1;
+  }
+}
