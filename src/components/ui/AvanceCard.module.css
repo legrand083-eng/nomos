@@ -1,0 +1,257 @@
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: var(--spacing-5) var(--spacing-13);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.badgeGray {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.badgeGreen {
+  background: var(--success);
+  color: white;
+}
+
+.badgeCyan {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.badgeGold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-8) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.labelText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.highlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-13);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  margin: var(--spacing-8) 0;
+}
+
+.montantAvance {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: var(--spacing-13);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--gold));
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input,
+.select {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-8);
+  transition: all 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-13);
+  margin-top: var(--spacing-13);
+}
+
+.editButton,
+.verserButton,
+.saveButton,
+.cancelButton {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editButton {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.editButton:hover {
+  border-color: var(--cyan);
+}
+
+.verserButton,
+.saveButton {
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+}
+
+.verserButton:hover,
+.saveButton:hover {
+  background: #00d4e6;
+}
+
+.cancelButton {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Dark mode */
+:global(.dark) .card {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .badgeGray {
+  background: var(--bg-tertiary-dark);
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .row {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .labelText {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .value {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .highlight {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .progressBar {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .input,
+:global(.dark) .select {
+  background: var(--bg-tertiary-dark);
+  border-color: var(--border-color-dark);
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .editButton,
+:global(.dark) .cancelButton {
+  background: var(--bg-tertiary-dark);
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}

@@ -1,0 +1,181 @@
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  gap: var(--spacing-13);
+  align-items: center;
+  padding: var(--spacing-13);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-8);
+}
+
+.cell {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.cellActions {
+  display: flex;
+  gap: var(--spacing-5);
+  justify-content: flex-end;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.badgeretard {
+  background: var(--warning);
+  color: white;
+}
+
+.badgenon_conformite {
+  background: var(--error);
+  color: white;
+}
+
+.badgesecurite {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.editButton,
+.deleteButton {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: var(--spacing-5);
+  transition: transform 0.2s ease;
+}
+
+.editButton:hover {
+  transform: scale(1.2);
+}
+
+.deleteButton:hover {
+  transform: scale(1.2);
+}
+
+.form {
+  background: var(--bg-secondary);
+  border: 2px solid var(--cyan);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+  margin-bottom: var(--spacing-13);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-13);
+  margin-bottom: var(--spacing-21);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input,
+.select {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-8);
+  transition: all 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-13);
+}
+
+.saveButton,
+.cancelButton {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveButton {
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+}
+
+.saveButton:hover {
+  background: #00d4e6;
+}
+
+.cancelButton {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Dark mode */
+:global(.dark) .row,
+:global(.dark) .form {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .cell,
+:global(.dark) .label {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .input,
+:global(.dark) .select {
+  background: var(--bg-tertiary-dark);
+  border-color: var(--border-color-dark);
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .cancelButton {
+  background: var(--bg-tertiary-dark);
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+@media (max-width: 1024px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

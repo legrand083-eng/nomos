@@ -1,0 +1,140 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.alertBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: var(--spacing-5) var(--spacing-13);
+  background: var(--error);
+  color: white;
+  border-radius: var(--radius-sm);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.gaugeContainer {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-21) 0;
+}
+
+.canvas {
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-21);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-8) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.value.gold {
+  color: var(--gold);
+}
+
+.warning,
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-13);
+  padding: var(--spacing-13);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-13);
+}
+
+.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--warning);
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+}
+
+.warningIcon,
+.errorIcon {
+  font-size: 20px;
+}
+
+.warningText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--warning);
+}
+
+.errorText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--error);
+}
+
+/* Dark mode */
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .row {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .label {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .value {
+  color: var(--text-primary-dark);
+}

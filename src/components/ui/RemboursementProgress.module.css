@@ -1,0 +1,184 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.progress {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-13);
+  margin-bottom: var(--spacing-21);
+}
+
+.amountCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+  padding: var(--spacing-13);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.value.cyan {
+  color: var(--cyan);
+}
+
+.value.gold {
+  color: var(--gold);
+}
+
+.progressBar {
+  width: 100%;
+  height: 21px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-21);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--gold));
+  transition: width 0.5s ease;
+}
+
+.history {
+  margin-top: var(--spacing-21);
+  padding-top: var(--spacing-21);
+  border-top: 1px solid var(--border-color);
+}
+
+.historyTitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-13) 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: var(--bg-tertiary);
+}
+
+.table th {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: var(--spacing-8) var(--spacing-13);
+  text-transform: uppercase;
+}
+
+.table td {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: var(--spacing-8) var(--spacing-13);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table .montant {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.table .cumul {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* Dark mode */
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .title,
+:global(.dark) .historyTitle {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .amountCard {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .label {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .value {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .progressBar {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .history {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .table thead {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .table th {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .table td {
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+@media (max-width: 768px) {
+  .amounts {
+    grid-template-columns: 1fr;
+  }
+}

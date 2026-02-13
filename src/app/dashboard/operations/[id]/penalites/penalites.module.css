@@ -1,0 +1,342 @@
+.container {
+  padding: var(--spacing-34);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-34);
+}
+
+.title {
+  font-family: var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-21);
+  margin-bottom: var(--spacing-34);
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: var(--spacing-21);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.infoLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.infoValue {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.infoValue strong {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--error);
+}
+
+.section {
+  margin-bottom: var(--spacing-55);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.addButton {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13) var(--spacing-21);
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: #00d4e6;
+}
+
+.addForm {
+  margin-bottom: var(--spacing-21);
+}
+
+.baremesTable {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  gap: var(--spacing-13);
+  padding: var(--spacing-13);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-13);
+}
+
+.headerCell {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.emptyBaremes {
+  text-align: center;
+  padding: var(--spacing-34);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.lotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-21);
+}
+
+.lotCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.lotCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+  padding-bottom: var(--spacing-13);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lotCardTitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.lotCardMontant {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.lotPenalites {
+  margin-top: var(--spacing-21);
+}
+
+.lotPenalitesTitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-13) 0;
+}
+
+.penalitesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.penaliteItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-8);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.penaliteInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.penaliteType {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.penaliteDate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.penaliteMontant {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--error);
+}
+
+.noPenalites {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  padding: var(--spacing-55);
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* Dark mode */
+:global(.dark) .title {
+  color: var(--gold);
+}
+
+:global(.dark) .subtitle {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .infoCard {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .infoLabel {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .infoValue {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .sectionTitle {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .baremesTable {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .tableHeader {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .headerCell {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .emptyBaremes {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .lotCard {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .lotCardHeader {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .lotCardTitle,
+:global(.dark) .lotPenalitesTitle,
+:global(.dark) .penaliteType {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .penaliteItem {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .penaliteDate {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .noPenalites {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .loading,
+:global(.dark) .empty {
+  color: var(--text-secondary-dark);
+}
+
+@media (max-width: 1024px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .lotsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableHeader {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-21);
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-13);
+  }
+}
