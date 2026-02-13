@@ -1,0 +1,221 @@
+.certificat {
+  background: white;
+  color: #0F1A2E;
+  padding: 55px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 34px rgba(0, 0, 0, 0.1);
+}
+
+.certificat.provisoire::before {
+  content: 'PROVISOIRE';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-family: 'Cinzel', serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(239, 68, 68, 0.15);
+  pointer-events: none;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.zoneIdentification {
+  background: var(--navy);
+  color: white;
+  padding: 34px;
+  margin: -55px -55px 34px -55px;
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: var(--gold);
+  margin: 0;
+}
+
+.numero {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--gold);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 21px;
+  margin-bottom: 21px;
+}
+
+.infoBlock h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.infoBlock p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.siret {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.periode {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.zoneComptable {
+  margin-bottom: 34px;
+}
+
+.zoneComptable h2,
+.zoneSousTraitants h2,
+.zoneSignatures h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 21px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 8px;
+}
+
+.tableComptable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableComptable td {
+  padding: 8px 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.tableComptable .amount {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #C3A227;
+}
+
+.totalRow {
+  background: #F3F4F6;
+  font-weight: 600;
+}
+
+.highlightRow {
+  background: #FEF3C7;
+  font-weight: 600;
+}
+
+.deductionRow {
+  color: #DC2626;
+}
+
+.revisionRow {
+  color: #059669;
+}
+
+.netRow {
+  background: var(--navy);
+  color: white;
+  font-size: 16px;
+}
+
+.netRow .amount {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.zoneSousTraitants {
+  margin-bottom: 34px;
+}
+
+.tableST {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tableST th {
+  background: #F3F4F6;
+  padding: 8px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #D1D5DB;
+}
+
+.tableST td {
+  padding: 8px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.neant {
+  text-align: center;
+  font-style: italic;
+  color: #6B7280;
+  padding: 21px;
+}
+
+.zoneSignatures {
+  margin-top: 55px;
+}
+
+.signaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+}
+
+@media (max-width: 768px) {
+  .certificat {
+    padding: 34px 21px;
+  }
+
+  .zoneIdentification {
+    margin: -34px -21px 21px -21px;
+    padding: 21px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .signaturesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .certificat {
+    box-shadow: none;
+  }
+
+  .certificat.provisoire::before {
+    color: rgba(239, 68, 68, 0.08);
+  }
+}

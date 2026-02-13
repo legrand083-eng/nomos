@@ -1,0 +1,62 @@
+.banner {
+  background-color: #000000;
+  padding: 8px 0;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid var(--gold);
+}
+
+.scrollContainer {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrollContent {
+  display: inline-block;
+  animation: scroll 60s linear infinite;
+}
+
+.newsItem {
+  display: inline-block;
+  padding: 0 34px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.newsValidation {
+  color: #4ADE80;
+}
+
+.newsAlert {
+  color: #FBBF24;
+}
+
+.newsPenalty {
+  color: #FF6B6B;
+}
+
+.newsInfo {
+  color: #60A5FA;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.banner:hover .scrollContent {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .newsItem {
+    font-size: 12px;
+    padding: 0 21px;
+  }
+}

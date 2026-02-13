@@ -1,0 +1,105 @@
+.card {
+  background: var(--bg-secondary);
+  padding: 21px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.unit {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.colorDefault {
+  color: var(--text-primary);
+}
+
+.colorSuccess {
+  color: var(--success);
+}
+
+.colorWarning {
+  color: var(--warning);
+}
+
+.colorError {
+  color: var(--error);
+}
+
+.colorGold {
+  color: var(--gold);
+}
+
+.colorCyan {
+  color: var(--cyan);
+}
+
+.trend {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.trendPositive {
+  color: var(--success);
+}
+
+.trendNegative {
+  color: var(--error);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 13px;
+  }
+
+  .value {
+    font-size: 24px;
+  }
+
+  .unit {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,120 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--bg-primary);
+  padding: 34px;
+  border-radius: 13px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 21px 55px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 21px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 13px;
+  justify-content: flex-end;
+  margin-top: 13px;
+}
+
+.btnCancel,
+.btnSubmit {
+  padding: 13px 21px;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnCancel {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.btnCancel:hover {
+  background: var(--border);
+}
+
+.btnSubmit {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btnSubmit:hover {
+  background: #D4B02A;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 21px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

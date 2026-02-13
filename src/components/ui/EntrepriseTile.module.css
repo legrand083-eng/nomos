@@ -1,0 +1,112 @@
+.tile {
+  padding: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  margin-bottom: 8px;
+}
+
+.tile:hover {
+  transform: translateX(3px);
+}
+
+.tile.active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(195, 162, 39, 0.2);
+}
+
+.statusGrey {
+  background: var(--bg-tertiary);
+  border-left: 3px solid #6B7280;
+}
+
+.statusViolet {
+  background: rgba(139, 92, 246, 0.1);
+  border-left: 3px solid #8B5CF6;
+}
+
+.statusGreen {
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 3px solid var(--success);
+}
+
+.statusOrange {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--warning);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lotNumber {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.entrepriseName {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 5px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  min-width: 45px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .tile {
+    padding: 10px;
+  }
+
+  .lotNumber {
+    font-size: 12px;
+  }
+
+  .entrepriseName {
+    font-size: 12px;
+  }
+
+  .progressText {
+    font-size: 11px;
+  }
+}

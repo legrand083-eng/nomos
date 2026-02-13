@@ -1,0 +1,170 @@
+.container {
+  padding: 0;
+  min-height: 100vh;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.header {
+  padding: 34px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: var(--gold);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+  padding: 21px 34px;
+  background: var(--bg-primary);
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 21px;
+  padding: 21px 34px;
+}
+
+.sidebar {
+  background: var(--bg-secondary);
+  padding: 21px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+}
+
+.sidebarTitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 13px 0;
+}
+
+.mainContent {
+  background: var(--bg-secondary);
+  padding: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.situationHeader {
+  margin-bottom: 21px;
+  padding-bottom: 13px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.situationHeader h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: var(--text-primary);
+  margin: 0 0 5px 0;
+}
+
+.entreprise {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.section {
+  margin-bottom: 34px;
+}
+
+.section h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 13px 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 34px;
+}
+
+.btn {
+  padding: 13px 21px;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnSuccess {
+  background: var(--success);
+  color: white;
+}
+
+.btnSuccess:hover {
+  background: #16A34A;
+}
+
+.btnPrimary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btnPrimary:hover {
+  background: #D4B02A;
+}
+
+.btnWarning {
+  background: var(--warning);
+  color: white;
+}
+
+.btnWarning:hover {
+  background: #D97706;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 55px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+}
