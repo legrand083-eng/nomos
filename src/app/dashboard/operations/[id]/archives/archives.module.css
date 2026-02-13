@@ -1,0 +1,277 @@
+/* NOMOΣ — Archives Page Styles */
+
+.container {
+  padding: var(--spacing-34);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-34);
+}
+
+.header h1 {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  color: var(--navy);
+  margin-bottom: var(--spacing-8);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-55);
+  color: var(--text-secondary);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-21);
+  flex-wrap: wrap;
+}
+
+.filterBtn,
+.filterActive {
+  padding: var(--spacing-8) var(--spacing-13);
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: var(--gold);
+  background: var(--bg-secondary);
+}
+
+.filterActive {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+/* Archives List */
+.archivesList {
+  display: grid;
+  gap: var(--spacing-21);
+}
+
+.archiveCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-21);
+  transition: box-shadow 0.2s;
+}
+
+.archiveCard:hover {
+  box-shadow: 0 3px 13px rgba(15, 26, 46, 0.08);
+}
+
+.archiveHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-13);
+  padding-bottom: var(--spacing-13);
+  border-bottom: 1px solid var(--border);
+}
+
+.archiveType {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+}
+
+.retentionBadge {
+  padding: var(--spacing-3) var(--spacing-8);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.retentionBadge.active {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.retentionBadge.expiring {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.retentionBadge.expired {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.archiveBody h3 {
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: var(--spacing-8);
+  font-family: var(--font-mono);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-13);
+}
+
+.archiveMeta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-13);
+  margin-bottom: var(--spacing-13);
+  padding: var(--spacing-13);
+  background: var(--bg-secondary);
+  border-radius: 5px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.metaLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.metaItem span:last-child {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.integrityStatus {
+  margin-bottom: var(--spacing-13);
+  padding: var(--spacing-8);
+  border-radius: 5px;
+}
+
+.verified {
+  color: var(--success);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.verifiedDate {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.notVerified {
+  color: var(--warning);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.archiveActions {
+  display: flex;
+  gap: var(--spacing-13);
+  padding-top: var(--spacing-13);
+  border-top: 1px solid var(--border);
+}
+
+.btnDownload,
+.btnVerify {
+  flex: 1;
+  padding: var(--spacing-8) var(--spacing-13);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btnDownload {
+  background: var(--navy);
+  color: white;
+}
+
+.btnDownload:hover {
+  background: var(--navy-dark);
+}
+
+.btnVerify {
+  background: var(--cyan-bg);
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+}
+
+.btnVerify:hover {
+  background: var(--cyan);
+  color: white;
+}
+
+.btnVerify:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  padding: var(--spacing-55);
+  color: var(--text-secondary);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .header h1 {
+    color: var(--gold);
+  }
+  
+  .archiveCard {
+    background: var(--bg-secondary);
+  }
+  
+  .archiveType {
+    color: var(--gold);
+  }
+  
+  .archiveBody h3 {
+    color: var(--text-primary);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-21);
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filterBtn,
+  .filterActive {
+    width: 100%;
+  }
+  
+  .archiveMeta {
+    grid-template-columns: 1fr;
+  }
+  
+  .archiveActions {
+    flex-direction: column;
+  }
+}
