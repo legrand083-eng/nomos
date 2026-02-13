@@ -1,0 +1,79 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-21);
+  flex-wrap: wrap;
+  gap: var(--spacing-13);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  gap: var(--spacing-21);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.legendLine {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legendLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Dark mode */
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .legendLabel {
+  color: var(--text-secondary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+}

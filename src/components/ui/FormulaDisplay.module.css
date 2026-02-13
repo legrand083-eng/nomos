@@ -1,0 +1,151 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.formulaDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-21);
+  flex-wrap: wrap;
+}
+
+.formulaText {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.formulaInput {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-5) var(--spacing-13);
+  width: 100px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.formulaInput:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: var(--bg-primary);
+}
+
+.formulaInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.validation {
+  margin-bottom: var(--spacing-21);
+}
+
+.validCheck,
+.invalidCheck {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-13);
+  border-radius: var(--radius-sm);
+}
+
+.validCheck {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--success);
+}
+
+.invalidCheck {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+}
+
+.checkIcon,
+.errorIcon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.checkIcon {
+  color: var(--success);
+}
+
+.errorIcon {
+  color: var(--error);
+}
+
+.checkText,
+.errorText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkText {
+  color: var(--success);
+}
+
+.errorText {
+  color: var(--error);
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-13);
+}
+
+.legendItem {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.legendItem strong {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  margin-right: var(--spacing-5);
+}
+
+/* Dark mode */
+:global(.dark) .formulaText {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .formulaInput {
+  background: var(--bg-tertiary-dark);
+  border-color: var(--border-color-dark);
+  color: var(--gold);
+}
+
+:global(.dark) .formulaInput:focus {
+  background: var(--bg-primary-dark);
+}
+
+:global(.dark) .legendItem {
+  color: var(--text-secondary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulaDisplay {
+    font-size: 16px;
+  }
+  
+  .formulaInput {
+    width: 80px;
+    font-size: 16px;
+  }
+  
+  .legend {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,217 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-21) 0;
+}
+
+.kDisplay {
+  text-align: center;
+  padding: var(--spacing-21);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-21);
+}
+
+.kLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-8);
+}
+
+.kValue {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: var(--spacing-5);
+}
+
+.kPercent {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.example {
+  margin-bottom: var(--spacing-21);
+}
+
+.exampleLabel {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-8);
+}
+
+.exampleInput {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-13);
+  transition: all 0.2s ease;
+}
+
+.exampleInput:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: var(--bg-primary);
+}
+
+.result {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+  margin-bottom: var(--spacing-21);
+}
+
+.resultRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-8) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resultRow:last-child {
+  border-bottom: none;
+}
+
+.resultRow.total {
+  margin-top: var(--spacing-13);
+  padding-top: var(--spacing-13);
+  border-top: 2px solid var(--border-color);
+}
+
+.resultLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.resultValue {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.resultValue.positive {
+  color: var(--success);
+}
+
+.resultValue.negative {
+  color: var(--error);
+}
+
+.total .resultValue {
+  font-size: 24px;
+  color: var(--gold);
+}
+
+.alert,
+.info {
+  padding: var(--spacing-13);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: var(--spacing-13);
+}
+
+.alert {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.info {
+  background: rgba(0, 238, 255, 0.1);
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+}
+
+/* Dark mode */
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .kDisplay {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .kLabel {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .exampleLabel {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .exampleInput {
+  background: var(--bg-tertiary-dark);
+  border-color: var(--border-color-dark);
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .exampleInput:focus {
+  background: var(--bg-primary-dark);
+}
+
+:global(.dark) .result {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .resultRow {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .resultRow.total {
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .resultLabel {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .resultValue {
+  color: var(--text-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kValue {
+    font-size: 36px;
+  }
+  
+  .kPercent {
+    font-size: 16px;
+  }
+  
+  .resultValue {
+    font-size: 16px;
+  }
+  
+  .total .resultValue {
+    font-size: 20px;
+  }
+}
