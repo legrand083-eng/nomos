@@ -1,0 +1,195 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.header {
+  margin-bottom: var(--spacing-21);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-13) 0;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--gold));
+  transition: width 0.3s ease;
+}
+
+.docList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.docItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-13);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.docInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-13);
+  flex: 1;
+}
+
+.docStatus {
+  font-size: 20px;
+  font-weight: 700;
+  width: 24px;
+  text-align: center;
+}
+
+.docDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.docLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.required {
+  color: var(--error);
+  margin-left: var(--spacing-3);
+}
+
+.docExpiry {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.docActions {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.uploadButton {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  padding: var(--spacing-8) var(--spacing-13);
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.uploadButton:hover {
+  background: #00d4e6;
+}
+
+.viewButton {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  padding: var(--spacing-8) var(--spacing-13);
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewButton:hover {
+  background: #b89420;
+}
+
+.deleteButton {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: var(--spacing-8) var(--spacing-13);
+  background: var(--error);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #dc2626;
+}
+
+.warning {
+  margin-top: var(--spacing-21);
+  padding: var(--spacing-13);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--warning);
+  text-align: center;
+}
+
+/* Dark mode */
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .progressBar {
+  background: var(--bg-tertiary-dark);
+}
+
+:global(.dark) .docItem {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .docLabel {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .docExpiry {
+  color: var(--text-secondary-dark);
+}
+
+@media (max-width: 768px) {
+  .docItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-13);
+  }
+
+  .docActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,156 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.section {
+  margin-bottom: var(--spacing-21);
+}
+
+.label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-8);
+}
+
+.select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: var(--spacing-13);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.hint {
+  margin-top: var(--spacing-8);
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.membresList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.membre {
+  padding: var(--spacing-13);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.membreInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.membreName {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.badge {
+  margin-left: var(--spacing-8);
+  padding: var(--spacing-3) var(--spacing-8);
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.membrePart {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.totalPart {
+  margin-top: var(--spacing-13);
+  padding: var(--spacing-13);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.totalPart.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.errorIcon {
+  margin-left: var(--spacing-8);
+}
+
+.saveButton {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13);
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+  background: #00d4e6;
+}
+
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .label {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .select {
+  background: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .hint {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .membre {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .membreName {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .membrePart {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .totalPart {
+  background: var(--bg-tertiary-dark);
+  color: var(--text-primary-dark);
+}

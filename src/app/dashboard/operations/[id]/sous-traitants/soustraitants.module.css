@@ -1,0 +1,244 @@
+.container {
+  padding: var(--spacing-34);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-34);
+}
+
+.title {
+  font-family: var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.addButton {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13) var(--spacing-21);
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: #00d4e6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: var(--spacing-34);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.stCard {
+  padding: var(--spacing-21);
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stCard:hover {
+  border-color: var(--cyan);
+}
+
+.stCard.selected {
+  border-color: var(--gold);
+  background: var(--bg-tertiary);
+}
+
+.stName {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-8);
+}
+
+.stInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-13);
+}
+
+.stLot {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.stMontant {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stStatus {
+  padding: var(--spacing-5) var(--spacing-13);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.stStatus.en_attente {
+  background: rgba(156, 163, 175, 0.2);
+  color: var(--text-secondary);
+}
+
+.stStatus.soumis_moe,
+.stStatus.soumis_moa {
+  background: rgba(0, 238, 255, 0.2);
+  color: var(--cyan);
+}
+
+.stStatus.valide_moe {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+}
+
+.stStatus.agree {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--success);
+}
+
+.stStatus.refuse {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--error);
+}
+
+.detail {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-34);
+}
+
+.detailHeader {
+  margin-bottom: var(--spacing-34);
+}
+
+.detailTitle {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.detailSiret {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.section {
+  margin-bottom: var(--spacing-34);
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-21) 0;
+}
+
+.actions {
+  margin-top: var(--spacing-21);
+  display: flex;
+  gap: var(--spacing-13);
+}
+
+.actionButton {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13) var(--spacing-21);
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background: #b89420;
+}
+
+.loading,
+.empty {
+  padding: var(--spacing-34);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+:global(.dark) .container {
+  background: var(--bg-primary-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .stCard {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .stName {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .stLot {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .stMontant {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .detail {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .detailTitle {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .detailSiret {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .sectionTitle {
+  color: var(--text-primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

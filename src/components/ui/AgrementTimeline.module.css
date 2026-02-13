@@ -1,0 +1,126 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-21);
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  flex: 1;
+  position: relative;
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
+  z-index: 2;
+}
+
+.stepIcon.completed {
+  background: var(--success);
+  color: white;
+  border-color: var(--success);
+}
+
+.stepIcon.active {
+  background: var(--cyan);
+  color: var(--navy);
+  border-color: var(--cyan);
+}
+
+.stepLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.stepDate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.stepLine {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--border-color);
+  z-index: 1;
+}
+
+.stepLine.completed {
+  background: var(--success);
+}
+
+.alert {
+  margin-top: var(--spacing-21);
+  padding: var(--spacing-13);
+  background: rgba(0, 238, 255, 0.1);
+  border: 1px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--cyan);
+  text-align: center;
+}
+
+:global(.dark) .container {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .stepIcon {
+  background: var(--bg-tertiary-dark);
+  color: var(--text-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .stepLabel {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .stepDate {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .stepLine {
+  background: var(--border-color-dark);
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .stepLine {
+    top: 40px;
+    left: 20px;
+    width: 2px;
+    height: 100%;
+  }
+}

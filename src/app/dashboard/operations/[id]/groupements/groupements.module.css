@@ -1,0 +1,166 @@
+.container {
+  padding: var(--spacing-34);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-34);
+}
+
+.title {
+  font-family: var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.addButton {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--spacing-13) var(--spacing-21);
+  background: var(--cyan);
+  color: var(--navy);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: #00d4e6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: var(--spacing-34);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-13);
+}
+
+.groupementCard {
+  padding: var(--spacing-21);
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.groupementCard:hover {
+  border-color: var(--cyan);
+}
+
+.groupementCard.selected {
+  border-color: var(--gold);
+  background: var(--bg-tertiary);
+}
+
+.groupementName {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-13);
+}
+
+.groupementInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.groupementType {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.groupementMandataire {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.detail {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-34);
+}
+
+.detailHeader {
+  margin-bottom: var(--spacing-34);
+}
+
+.detailTitle {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.detailLot {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.loading,
+.empty {
+  padding: var(--spacing-34);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+:global(.dark) .container {
+  background: var(--bg-primary-dark);
+}
+
+:global(.dark) .title {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .groupementCard {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .groupementName {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .groupementMandataire {
+  color: var(--text-secondary-dark);
+}
+
+:global(.dark) .detail {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+:global(.dark) .detailTitle {
+  color: var(--text-primary-dark);
+}
+
+:global(.dark) .detailLot {
+  color: var(--text-secondary-dark);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
