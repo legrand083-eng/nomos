@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getPool } from '@/lib/db';
-import { verifyToken } from '@/lib/auth';
+import { verifyToken } from '@/lib/withAuth';
 import { checkPlafond } from '@/lib/penalite-engine';
 
 export async function GET(request, { params }) {

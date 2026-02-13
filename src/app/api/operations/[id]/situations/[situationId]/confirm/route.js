@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 
 export const POST = withAuth(async (req, { params, user }) => {
   try {
-    const situationId = params.id;
+    const situationId = params.situationId;
 
     // Update situation status
     await pool.query(

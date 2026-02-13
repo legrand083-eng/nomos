@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 
 export const GET = withAuth(async (req, { params, user }) => {

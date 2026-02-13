@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 import { unlink } from 'fs/promises';
 import { join } from 'path';

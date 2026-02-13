@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { createHash } from 'crypto';

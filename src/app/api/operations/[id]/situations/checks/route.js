@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 
 export const GET = withAuth(async (req, { params, user }) => {
   try {
-    const operationId = params.opId;
+    const operationId = params.id;
     const { searchParams } = new URL(req.url);
     const entrepriseId = searchParams.get('entreprise_id');
     const lotId = searchParams.get('lot_id');

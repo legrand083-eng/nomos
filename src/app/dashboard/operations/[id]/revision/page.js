@@ -6,7 +6,35 @@ import styles from './revision.module.css';
 import FormulaDisplay from '@/components/ui/FormulaDisplay';
 import RevisionSimulator from '@/components/ui/RevisionSimulator';
 import IndiceChart from '@/components/ui/IndiceChart';
-import { getAvailableIndices } from '@/lib/revision-engine';
+// Available indices defined locally (client-side)
+const AVAILABLE_INDICES = [
+  { code: 'BT01', label: 'BT01 - Bâtiment tous corps d\'\u00e9tat' },
+  { code: 'BT02', label: 'BT02 - Gros oeuvre' },
+  { code: 'BT03', label: 'BT03 - Charpente métallique' },
+  { code: 'BT04', label: 'BT04 - Charpente bois' },
+  { code: 'BT05', label: 'BT05 - Couverture plomberie' },
+  { code: 'BT06', label: 'BT06 - Menuiserie bois' },
+  { code: 'BT07', label: 'BT07 - Menuiserie métallique' },
+  { code: 'BT08', label: 'BT08 - Serrurerie' },
+  { code: 'BT09', label: 'BT09 - Plâtrerie' },
+  { code: 'BT10', label: 'BT10 - Peinture' },
+  { code: 'BT11', label: 'BT11 - Électricité' },
+  { code: 'BT12', label: 'BT12 - Plomberie sanitaire' },
+  { code: 'BT13', label: 'BT13 - Chauffage ventilation' },
+  { code: 'BT14', label: 'BT14 - Ascenseurs' },
+  { code: 'TP01', label: 'TP01 - Travaux publics tous travaux' },
+  { code: 'TP02', label: 'TP02 - Terrassements généraux' },
+  { code: 'TP03', label: 'TP03 - Terrassements en grande masse' },
+  { code: 'TP04', label: 'TP04 - Canalisations d\'eau et d\'assainissement' },
+  { code: 'TP05', label: 'TP05 - Canalisations de gaz' },
+  { code: 'TP06', label: 'TP06 - Ouvrages d\'art' },
+  { code: 'TP07', label: 'TP07 - Voies ferrées' },
+  { code: 'TP08', label: 'TP08 - Travaux souterrains' },
+  { code: 'TP09', label: 'TP09 - Routes et pistes' },
+  { code: 'TP10', label: 'TP10 - Fondations spéciales' },
+  { code: 'TP11', label: 'TP11 - Électrification rurale' },
+  { code: 'TP12', label: 'TP12 - Lignes électriques aériennes' }
+];
 
 export default function RevisionPage() {
   const params = useParams();
@@ -21,7 +49,7 @@ export default function RevisionPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  const availableIndices = getAvailableIndices();
+  const availableIndices = AVAILABLE_INDICES;
 
   useEffect(() => {
     fetchData();

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { logout, verifyAccessToken } from '@/lib/auth';
+import { logout, verifyAccessToken } from '@/lib/withAuth';
 import cookie from 'cookie';
 
 export async function POST(request) {

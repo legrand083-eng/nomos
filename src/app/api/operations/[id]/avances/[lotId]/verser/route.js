@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getPool } from '@/lib/db';
-import { verifyToken } from '@/lib/auth';
+import { verifyToken } from '@/lib/withAuth';
 
 export async function POST(request, { params }) {
   try {

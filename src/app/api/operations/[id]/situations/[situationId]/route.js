@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 
 export const GET = withAuth(async (req, { params, user }) => {
   try {
-    const situationId = params.id;
+    const situationId = params.situationId;
 
     const [situations] = await pool.query(
       `SELECT s.*, l.name as lot_name, l.montant_ht as lot_montant_ht,
@@ -48,7 +48,7 @@ export const GET = withAuth(async (req, { params, user }) => {
 
 export const PUT = withAuth(async (req, { params, user }) => {
   try {
-    const situationId = params.id;
+    const situationId = params.situationId;
     const data = await req.json();
 
     // Check if modifiable

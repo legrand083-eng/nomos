@@ -3,7 +3,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import { verifyAuth } from '@/lib/auth';
+import { verifyAuth } from '@/lib/withAuth';
 import { verifyArchiveIntegrity } from '@/lib/archive-engine';
 
 /**

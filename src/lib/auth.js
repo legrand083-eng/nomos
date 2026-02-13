@@ -171,9 +171,41 @@ async function logout(userId) {
   return { success: true };
 }
 
+/* ─── Verify Auth (Next.js App Router) ─────────────────── */
+
+async function verifyAuth(request) {
+  try {
+    const authHeader = request.headers.get('authorization');
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return null;
+    }
+    
+    const token = authHeader.substring(7);
+    const payload = verifyAccessToken(token);
+    
+    if (!payload) {
+      return null;
+    }
+    
+    return {
+      id: payload.userId,
+      tenant_id: payload.tenantId,
+      email: payload.email,
+      role: payload.role,
+      first_name: payload.firstName,
+      last_name: payload.lastName
+    };
+  } catch (error) {
+    console.error('verifyAuth error:', error);
+    return null;
+  }
+}
+
 module.exports = {
   hashPassword, verifyPassword, validateAntiRobot,
   generateAccessToken, generateRefreshToken,
   verifyAccessToken, verifyRefreshToken,
-  login, refresh, logout
+  login, refresh, logout,
+  verifyAuth
 };

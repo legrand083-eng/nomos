@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import db from '@/lib/db';
 
 export async function POST(request) {

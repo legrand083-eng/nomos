@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import pool from '@/lib/db';
-import { verifyAuth } from '@/lib/auth';
+import { verifyAuth } from '@/lib/withAuth';
 import { calculateRevisionForSituation } from '@/lib/revision-engine';
 
 export async function POST(request, { params }) {

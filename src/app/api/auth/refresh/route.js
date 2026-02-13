@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { refresh } from '@/lib/auth';
+import { refresh } from '@/lib/withAuth';
 import cookie from 'cookie';
 
 export async function POST(request) {

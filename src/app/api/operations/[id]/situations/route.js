@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { withAuth } from '@/lib/auth';
+import { withAuth } from '@/lib/withAuth';
 import pool from '@/lib/db';
 
 export const GET = withAuth(async (req, { params, user }) => {
   try {
-    const operationId = params.opId;
+    const operationId = params.id;
 
     const [situations] = await pool.query(
       `SELECT s.*, l.name as lot_name, e.name as entreprise_name
@@ -25,7 +25,7 @@ export const GET = withAuth(async (req, { params, user }) => {
 
 export const POST = withAuth(async (req, { params, user }) => {
   try {
-    const operationId = params.opId;
+    const operationId = params.id;
     const data = await req.json();
 
     // Get next numero
